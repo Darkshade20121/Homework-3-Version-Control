@@ -22,8 +22,10 @@ def inp_validation():
         try:
             year = int(input("Enter a year: "))
         except ValueError:
-            print("Sorry, this value was not accepted")
+            print("Sorry, this type was not accepted")
             continue
+        if year < 0:
+            print("Sorry, this number was not accepted")
         else:
             print("Value was successful!")
             return year
